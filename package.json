@@ -1,5 +1,5 @@
 {
-  "name": "@bf16/mcp-server",
+  "name": "bf16-mcp-server",
   "version": "0.1.0",
   "description": "Official Model Context Protocol (MCP) server for bf16.ai — inspect live 1M-context LLM pricing, estimate coding-agent costs, generate client configs, and run ZDR completions",
   "type": "module",

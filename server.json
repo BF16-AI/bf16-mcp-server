@@ -12,7 +12,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@bf16/mcp-server",
+      "identifier": "bf16-mcp-server",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"

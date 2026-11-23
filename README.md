@@ -1,4 +1,4 @@
-# @bf16/mcp-server
+# bf16-mcp-server
 
 Official Model Context Protocol (MCP) server for [bf16.ai](https://bf16.ai).
 
@@ -18,7 +18,7 @@ Official Model Context Protocol (MCP) server for [bf16.ai](https://bf16.ai).
   "mcpServers": {
     "bf16": {
       "command": "npx",
-      "args": ["-y", "@bf16/mcp-server"],
+      "args": ["-y", "bf16-mcp-server"],
       "env": {
         "BF16_API_KEY": "sk-bf16-..."
       }
