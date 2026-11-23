@@ -1,0 +1,139 @@
+{
+  "author": "BF16 Team",
+  "description": "Official Model Context Protocol (MCP) server for bf16.ai — inspect live 1M-context LLM pricing, estimate coding-agent costs, generate client configs, and run ZDR completions",
+  "homepage": "https://bf16.ai",
+  "identifier": "bf16-ai-bf16-mcp-server",
+  "name": "bf16-mcp-server",
+  "prompts": [],
+  "resources": [],
+  "tags": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "bf16",
+    "llm",
+    "ai",
+    "coding-agents",
+    "deepseek",
+    "glm",
+    "kimi"
+  ],
+  "tools": [
+    {
+      "name": "bf16_list_models",
+      "description": "List live 1M-context uncensored open-weight models on bf16.ai with real-time per-1M USD pricing and capabilities (no API key required).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "includeRouters": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "bf16_estimate_cost",
+      "description": "Estimate exact USD cost for running a workload on a bf16.ai model using live /v1/models rates and optional prompt-cache hit ratio (no API key required).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Model ID from bf16_list_models"
+          },
+          "input_tokens": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "output_tokens": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "cached_input_tokens": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0
+          }
+        },
+        "required": [
+          "model",
+          "input_tokens",
+          "output_tokens"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "bf16_get_client_setup",
+      "description": "Return copy-paste configuration for connecting Claude Code, Codex CLI, OpenCode, Cursor, Cline, or Roo Code to bf16.ai (no API key required).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "client": {
+            "type": "string",
+            "enum": [
+              "claude-code",
+              "codex-cli",
+              "opencode",
+              "cursor",
+              "cline",
+              "roo-code"
+            ],
+            "default": "claude-code"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "bf16_complete",
+      "description": "Run a zero-data-retention chat completion on bf16.ai (requires BF16_API_KEY env var).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model": {
+            "type": "string",
+            "default": "deepseek/deepseek-v4.1-flash-uncensored-fast"
+          },
+          "system": {
+            "type": "string"
+          },
+          "max_tokens": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 16384,
+            "default": 2048
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    }
+  ],
+  "version": "0.1.0"
+}
