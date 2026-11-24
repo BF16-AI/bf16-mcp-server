@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.bf16-ai/bf16-mcp-server",
   "title": "bf16.ai LLM Catalog, Cost Estimator & ZDR Inference",
-  "description": "Query live 1M-context model pricing, estimate coding-agent token costs, generate client setup snippets, and run Zero Data Retention LLM completions on bf16.ai.",
+  "description": "Live 1M-context LLM pricing, coding-agent cost estimator, client setup, and ZDR inference.",
   "repository": {
     "url": "https://github.com/BF16-AI/bf16-mcp-server",
     "source": "github"
