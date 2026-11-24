@@ -5,7 +5,7 @@
   "type": "module",
   "mcpName": "io.github.bf16-ai/bf16-mcp-server",
   "bin": {
-    "bf16-mcp-server": "./dist/index.js"
+    "bf16-mcp-server": "dist/index.js"
   },
   "main": "./dist/index.js",
   "files": [
@@ -33,7 +33,7 @@
   "homepage": "https://bf16.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BF16-AI/bf16-mcp-server.git"
+    "url": "git+https://github.com/BF16-AI/bf16-mcp-server.git"
   },
   "author": "BF16 Team <hello@bf16.ai> (https://bf16.ai)",
   "license": "MIT",
