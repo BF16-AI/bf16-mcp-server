@@ -1,9 +1,9 @@
 {
   "name": "bf16-mcp-server",
-  "version": "0.1.0",
-  "description": "Official Model Context Protocol (MCP) server for bf16.ai — inspect live 1M-context LLM pricing, estimate coding-agent costs, generate client configs, and run ZDR completions",
+  "version": "0.1.1",
+  "description": "Official Model Context Protocol (MCP) server for bf16.ai \u2014 inspect live 1M-context LLM pricing, estimate coding-agent costs, generate client configs, and run ZDR completions",
   "type": "module",
-  "mcpName": "io.github.bf16-ai/bf16-mcp-server",
+  "mcpName": "io.github.BF16-AI/bf16-mcp-server",
   "bin": {
     "bf16-mcp-server": "dist/index.js"
   },

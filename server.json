@@ -7,13 +7,13 @@
     "url": "https://github.com/BF16-AI/bf16-mcp-server",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://bf16.ai",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "bf16-mcp-server",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": {
         "type": "stdio"
       },
